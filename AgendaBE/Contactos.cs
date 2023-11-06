@@ -47,14 +47,6 @@ namespace AgendaBE
 
 
 
-        public void Agregar(NuevoContacto aContacto)
-        {
-            contactos[fila] = aContacto;
-
-            fila++;
-
-        }
-
 
         public NuevoContacto Buscar(string aTelefono)
         {

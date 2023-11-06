@@ -17,12 +17,8 @@ namespace Agenda
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            NuevoContacto Contacto = new NuevoContacto();
-            Contacto.Agregar(txtNombre.Text,
-                   txtTelefono.Text,
-                   txtMail.Text);
-            contactos.InsertContacto(Contacto);
-            dataGridView1.DataSource = contactos.ListaDT;
+            
+
 
 
 
@@ -47,17 +43,19 @@ namespace Agenda
                 }
                 else
                 {
+                    NuevoContacto Contacto = new NuevoContacto();
                     errorProvider1.SetError(txtTelefono, "");
                     Contacto.Agregar(txtNombre.Text,
                     txtTelefono.Text,
                     txtMail.Text);
-                    contactos.Agregar(Contacto);
+                    contactos.InsertContacto(Contacto);
+                    dataGridView1.DataSource = contactos.ListaDT;
 
 
                 }
             }
 
-
+            
 
         }
 
@@ -110,6 +108,8 @@ namespace Agenda
             }
             else
             {
+                lblNombreR.Visible=false;
+                lblMailR.Visible=false;
                 lblTelefonoR.Visible=true;
                 lblTelefonoR.Text = "no existe";
                 txtTelefonoB.SelectAll();
