@@ -9,9 +9,6 @@ namespace AgendaBE
 
         public DataTable ListaDT { get; set; } = new DataTable();
 
-        public NuevoContacto[] contactos { get; set; } = new NuevoContacto[200];
-        private int fila = 0;
-
 
 
         public Contactos()

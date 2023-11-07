@@ -20,12 +20,5 @@ namespace AgendaBE
 
         }
 
-        public string Listar()
-        {
-            string Res = "";
-            Res = Nombre + " - " + Telefono + " - " + Mail;
-
-            return Res;
-        }
     }
 }
